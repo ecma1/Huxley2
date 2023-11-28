@@ -65,4 +65,4 @@ stages:
         appType: 'webAppLinux'
         WebAppName: 'ecma2'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Huxley2.zip'
-        RuntimeStack: 'DOTNETCORE|6.0'
+        RuntimeStack: 'DOTNETCORE3.1'
