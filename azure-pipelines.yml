@@ -63,6 +63,6 @@ stages:
         ConnectionType: 'AzureRM'
         azureSubscription: 'Azure subscription 1(0df16628-6ad3-4f8e-a9ca-23a960bd34e5)'
         appType: 'webAppLinux'
-        WebAppName: 'ecma2'
+        WebAppName: 'ecma'
         packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Huxley2.zip'
-        RuntimeStack: 'DOTNETCORE3.1'
+        RuntimeStack: 'DOTNETCORE6.0'
