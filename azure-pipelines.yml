@@ -48,6 +48,14 @@ stages:
         DOTNET_NOLOGO: true
       inputs:
         command: 'publish'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(0df16628-6ad3-4f8e-a9ca-23a960bd34e5)'
+    appType: 'webAppLinux'
+    WebAppName: 'ecma'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Huxley2.zip'
+    RuntimeStack: 'DOTNETCORE6.0'
         publishWebProjects: true
         projects: '**/Huxley2.csproj'
         arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
